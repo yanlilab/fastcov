@@ -131,7 +131,6 @@ Step 5/5: Clustering byariant patterns
 Covariant patterns assigned to sequences: ABCD_RT_M.fas.seq2patterns
 Sequences clustered by covariant patterns: ABCD_RT_M.fas.patternClusters
 
-Finished. Time used: 29.423730883s
 ```
 The most time-consuming stage is `step 3`, so we add a process bar.
 
@@ -139,7 +138,7 @@ Output files:
 
     ABCD_RT_M.fas.pairs            # covariant pairs information
     ABCD_RT_M.fas.patterns         # covariant patterns
-    ABCD_RT_M.fas.patternClusters  # covariant pattern clusters
+    ABCD_RT_M.fas.clusters         # sequence clusters by covariant patterns
     ABCD_RT_M.fas.seq2patterns     # covariant patterns of every sequence
 
 ## Errors and Solutions
