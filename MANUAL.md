@@ -65,7 +65,7 @@ Options
  file. e.g, for a input file `test.fa`, output files will be:
 ```
 test.fa.pairs
-test.fa.patternClusters
+test.fa.clusters
 test.fa.patterns
 test.fa.seq2patterns
 ```
@@ -129,7 +129,7 @@ Done
 
 Step 5/5: Clustering byariant patterns
 Covariant patterns assigned to sequences: ABCD_RT_M.fas.seq2patterns
-Sequences clustered by covariant patterns: ABCD_RT_M.fas.patternClusters
+Sequences clustered by covariant patterns: ABCD_RT_M.fas.clusters
 
 ```
 The most time-consuming stage is `step 3`, so we add a process bar.
