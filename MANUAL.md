@@ -127,7 +127,7 @@ Covariant patterns saved to file: ABCD_RT_M.fas.patterns
 
 Done
 
-Step 5/5: Clustering byariant patterns
+Step 5/5: Clustering by covariant patterns
 Covariant patterns assigned to sequences: ABCD_RT_M.fas.seq2patterns
 Sequences clustered by covariant patterns: ABCD_RT_M.fas.clusters
 
