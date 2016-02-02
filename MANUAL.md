@@ -1,19 +1,31 @@
-# fastcov - Fast Covariant Mutation Detector v1.0
+# fastcov - Fast Covariant Mutation Detector v1.01
+
+Fast Covariant Mutation Detector. http://yanlilab.github.io/fastcov
 
 ## Introduction
 
-Covariant mutation is very important to maintain the structural characteristics
- and consequently to maintain the protein conformational and functional
- stability. We developed a novel algorithm to identify correlated changes by
- using an *independent pair model* followed by a *correlated tandem model*.
+Covariant mutations are very important to maintain the structural
+characteristics and consequently to maintain the protein conformational and
+functional stability. In this study, we developed a novel algorithm to
+identify correlated changes by using an independent pair model followed by
+a correlated tandem model.
 
-By contrast to other complex methods, the lightweight fast `fastcov` algorithm
- significantly improves the processing effect. By the applications on the
- genotyping, phylogeny and divergence analysis, the results demonstrate that
- this approach has an excellent performance to detect covariant residue
- patterns. Based on the covariant information, the clustering performance
- reached a sensitivity of 99.42%, a specificity of 99.94% and an accuracy of
- 99.77%.
+Fastcov is based on a correlation idea of interaction restriction
+among site-residue elements, which is very suitable for natural co-variances
+analysis. In contrast to other complex methods, the lightweight and fast
+Fastcov algorithm significantly improves the processing efficiency.
+
+By tests on the genotyping, phylogeny and divergence analysis, the results
+demonstrated that this approach has an excellent performance on detecting
+covariant residue patterns. Based on the covariant pattern clustering,
+the genotyping performance reached a sensitivity of 99.42%, a specificity
+of 99.94% and an accuracy of 99.77%; The covariant patterns displayed
+co-evolutionary modes corresponding to the phylogeny tree;
+Moreover, it found an important evidence involving in the structural stability
+of protein during the evolution. As an original algorithm, Fastcov provides
+not only a fast and reliable approach to achieve the data analysis,
+but also much more powerful functions including multiple variance detection
+and evolutionary classification.
 
 ## Installation
 
@@ -27,82 +39,93 @@ Just [download](https://github.com/yanlilab/fastcov/releases) executable file
  run it in  command-line interface, no any dependency are needed.
 
 You can also add the directory of the executable file to environment variable
-`PATH`, so you can run `fastcov` anywhere. For *nix, type:
+`PATH`, so you can run `fastcov` anywhere.
+
+1). For windows, the simplest way is copy it to `C:\WINDOWS\system32`.
+
+2). For Linux, type:
 
 ```
 chmod a+x /PATH/OF/FASTCOV/fastcov
 echo export PATH=\$PATH:/PATH/OF/FASTCOV >> ~/.bashrc
 ```
-or simply copy it to `/usr/local/bin`
 
-For windows, the simplest way is copy it to `C:\WINDOWS\system32`。
+or simply copy it to `/usr/local/bin`
 
 ## Usage
 
-    usage: fastcov [-o ] [-t ] [-mrn ] [-mcp ] [-mpp ] [-mad ] [-mmp ] [-j ] [-v] [-h] INPUTFILE
+```
+usage: fastcov [-p ] [-d ] [-r ] [-c ] [-n ] [-o ] [-j ] [-h] INPUTFILE
 
-    positional arguments:
-      inputfile
+positional arguments:
+  inputfile
 
-    options:
-      -o      prefix of output files [infile]
-      -t      sequence type PROTEIN/DNA [PROTEIN]
-      -mrn    minimum residue number at each site [5]
-      -mcp    minimum proportion of any sequence identical to the consensus [0.33]
-      -mpp    minimum pairing purity of two sites [0.7]
-      -mad    minimum associated degree [0.6]
-      -mmp    minimum matching ratio of to the pattern [0.45]
-      -j      CPU number [CPU number of your computer]
-      -v      verbosely print information
-      -h      show help
+options:
+  -p      minimum pairing purity of two sites [0.7]
+  -d      minimum associated degree [0.6]
+  -r      minimum matching ratio of to the pattern [0.45]
+  -n      minimum residue number at each site [5]
+  -c      minimum proportion of any sequence identical to the consensus [0.33]
+  -o      prefix of output files [inputfile]
+  -j      CPU number [CPU number of your computer]
+  -h      show help
+```
 
-Positional arguments
-- `inputfile` should be aligned protein or DNA sequences in FASTA format file,  produced by multi sequence alignment softwares.
+#### Positional arguments
+- `inputfile` should be aligned protein sequences in FASTA format file,
+ produced by multi sequence alignment softwares.
+ Case is not sensitive.
 
-Options
+ One-seq-per-line format could be converted to FASTA format by
+ `for f in *.aln; do cat -n $f | awk '{print ">"$1"\n"$2}' > "$f.fas" `
+
+#### Options
+
+Main algorithm parameters
+
+- `-p` defines the minimum pairing purity of two sites. Default is 0.7.
+- `-d` defined the minimum associated degree of one group of
+covariant mutation elements. Default is 0.6.
+- `-r` defines the minimum matching ratio of to the pattern at
+clustering stage. Default is 0.45.
+
+Sequences filter criteria
+
+- `-n` is the minimum residue number at each site.  Default value is 5.
+- `-c` is the minimum proportion of any sequence identical to the consensus.
+Default value is 0.33, i.e. the number of residues identical to the that of the
+ same position of consensus sequences should be at  least one third of the length of consensus.
+ Sequences that fail to reach this criteria will be discarded.
+
+Output
 
 - `-o` defines the prefix of output files, default value is the same as input
  file. e.g, for a input file `test.fa`, output files will be:
+
 ```
-test.fa.pairs
-test.fa.clusters
-test.fa.patterns
-test.fa.seq2patterns
+test.aligned.fa.pairs
+test.aligned.fa.clusters
+test.aligned.fa.patterns
+test.aligned.fa.seq2patterns
 ```
-- `-t` defines the sequence type, it should be "PROTEIN" or "DNA".
-Default is "PROTEIN"
-- `-mrn` is the **m**inimum **r**esidue **n**umber at each site.
- Default value is 5.
-- `-mcp` is the **m**inimum **p**roportion of any sequence identical to
-the **c**onsensus. Default value is 0.33, i.e. the number of residues
-identical to the that of the same position of consensus sequences should be at
- least one third of the length of consensus.
- Sequences that fail to reach this criteria will be discarded.
-- `-mpp` defines the **m**inimum **p**airing **p**urity of two sites.
-Default is 0.7.
-However, it could be rationally reset according to the length of sequences or
-a special condition
-- `-mad` defined the **m**inimum **a**ssociated **d**egree of one group of
-covariant mutation elements. Default is 0.45.
-- `-mmp` defines the **m**inimum **m**atching ratio of to the **p**attern in
-clustering stage.
-- `-j` is the number of CPU. `fastcov` detect your computer and set the
-default value with the maximum CPU number. Generally, the bigger the value is,
+
+Performance
+
+- `-j` is the number of CPU. `fastcov` detects your computer and set the
+default value with the maximum CPU number. The bigger the value is,
 the faster `fastcov` runs.
-- `-v` could print some detail information, like length and number of input
-and candidate covariant sites.
 
 ## Examples
-Taking `examples/ABCD_RT_M.fas` for example.
+Taking `examples/ABCD_RT_M.aligned.fas` for example.
 
 Quik run:
 
-    fastcov ABCD_RT_M.fas
+    fastcov ABCD_RT_M.aligned.fas
 
 Terminal Output:
 
 ```
-Input: ABCD_RT_M.fas
+Input: ABCD_RT_M.aligned.fas
 
 Step 1/5: Reading sequences
 
@@ -116,30 +139,32 @@ Done
 Step 3/5: Searching independent pairs
 21115 / 21115 [===================================================================================] 100.00 % 28s
 
-Covariant site pairs saved to file: ABCD_RT_M.fas.pairs
+Covariant site pairs saved to file: ABCD_RT_M.aligned.fas.pairs
 
 Done
 
 Step 4/5: Searching covariant patterns
 52 / 52 [===========================================================================================] 100.00 % 0
 
-Covariant patterns saved to file: ABCD_RT_M.fas.patterns
+Covariant patterns saved to file: ABCD_RT_M.aligned.fas.patterns
 
 Done
 
 Step 5/5: Clustering by covariant patterns
-Covariant patterns assigned to sequences: ABCD_RT_M.fas.seq2patterns
-Sequences clustered by covariant patterns: ABCD_RT_M.fas.clusters
+Covariant patterns assigned to sequences: ABCD_RT_M.aligned.fas.seq2patterns
+Sequences clustered by covariant patterns: ABCD_RT_M.aligned.fas.clusters
 
 ```
 The most time-consuming stage is `step 3`, so we add a process bar.
 
 Output files:
 
-    ABCD_RT_M.fas.pairs            # covariant pairs information
-    ABCD_RT_M.fas.patterns         # covariant patterns
-    ABCD_RT_M.fas.clusters         # sequence clusters by covariant patterns
-    ABCD_RT_M.fas.seq2patterns     # covariant patterns of every sequence
+    ABCD_RT_M.aligned.fas.pairs            # covariant pairs information
+    ABCD_RT_M.aligned.fas.patterns         # covariant patterns
+    ABCD_RT_M.aligned.fas.clusters         # sequence clusters by covariant patterns
+    ABCD_RT_M.aligned.fas.seq2patterns     # covariant patterns of every sequence
+
+[More examples](https://github.com/yanlilab/fastcov/tree/master/examples)
 
 ## Errors and Solutions
 
@@ -154,14 +179,15 @@ type "fastcov -h" for help
 2) Input file is not aligned.
 
 ```
-[Error] sequence length not equal: 343 (AB014392_Pol-C) != 344. input file should be aligned amino acids sequences in FASTA format
+[Error] sequence length not equal: 343 (AB014392_Pol-C) != 344.
+input file should be aligned amino acids sequences in FASTA format
 ```
 
 3) Illegal characters in sequence. FASTA parsing module of `fastcov` strictly
  check the sequences, you may check input sequence according according to
  the IUPAC nucleotide code (http://www.bioinformatics.org/sms2/iupac.html).
- It may also be caused by unmatch of sequence type (given by `-t`) and actual
- sequence type in FASTA file.
+ It may also be caused by unmatch of sequence type (PROTEIN) and actual
+ sequence type (DNA) in FASTA file.
 
 ```
 Input: test.fa
@@ -180,6 +206,6 @@ Please don't hesitate to email us.
 Yan Li <liyan.com@gmail.com>, Wei Shen <shenwei356@gmail.com>
 
 ## Copyright
-Copyright © 2015, All Rights Reserved.
+Copyright © 2015-2016, All Rights Reserved.
 
 This software is free to distribute for academic research.
