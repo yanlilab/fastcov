@@ -37,7 +37,7 @@ and evolutionary classification.
  See [MANUAL](https://github.com/yanlilab/fastcov/blob/master/MANUAL.md)
 
 ## Please cite
-Wei Shen, Yan Li*. A novel algorithm for covariant analysis and clustering of biological sequences (submitted)
+Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (submitted)
 
 
 ## Copyright
