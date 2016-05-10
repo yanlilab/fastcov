@@ -1,31 +1,28 @@
 # fastcov - Fast Covariant Mutation Detector v1.01
 
-Fast Covariant Mutation Detector. http://yanlilab.github.io/fastcov
-
 ## Introduction
 
-Covariant mutations are very important to maintain the structural
-characteristics and consequently to maintain the protein conformational and
-functional stability. In this study, we developed a novel algorithm to
-identify correlated changes by using an independent pair model followed by
-a correlated tandem model.
+Single genetic mutation always brings along with a set of compensatory mutations, 
+therefore multiple changes commonly occur in the biological sequences, 
+which play crucial roles to maintain the conformational and functional stability. 
+Although there are a lot of methods to detect single mutation or covariant pairs, 
+it is still a great challenge to explore the non-synchronous multiple changes
+at different sites in the sequences. 
 
-Fastcov is based on a correlation idea of interaction restriction
-among site-residue elements, which is very suitable for natural co-variances
-analysis. In contrast to other complex methods, the lightweight and fast
-Fastcov algorithm significantly improves the processing efficiency.
-
-By tests on the genotyping, phylogeny and divergence analysis, the results
-demonstrated that this approach has an excellent performance on detecting
-covariant residue patterns. Based on the covariant pattern clustering,
-the genotyping performance reached a sensitivity of 99.42%, a specificity
-of 99.94% and an accuracy of 99.77%; The covariant patterns displayed
-co-evolutionary modes corresponding to the phylogeny tree;
-Moreover, it found an important evidence involving in the structural stability
-of protein during the evolution. As an original algorithm, Fastcov provides
-not only a fast and reliable approach to achieve the data analysis,
-but also much more powerful functions including multiple variance detection
-and evolutionary classification.
+Here we developed a novel algorithm, named Fastcov, to identify multiple
+correlated changes of biological sequences, by using an independent pair 
+model followed by a tandem model of site-residue elements, based on a 
+inter-restriction thinking. The results showed that Fastcov has excellent
+performances on harvesting co-pairs and detecting multiple covariant patterns.
+By 10-fold cross-validation in different scales of datasets, 
+the characteristic patterns successfully classified the sequences into their
+target groups with an accuracy of 98% above. Moreover, it demonstrated the 
+multiple covariant patterns represented co-evolutionary modes, corresponding 
+to the phylogeny tree, and it provided new understanding of the structural
+stability of protein during the evolution. In contrast to other methods, 
+Fastcov, as an original algorithm, provides not only a reliable and effective
+approach to harvest covariant pairs of site-residues, but also more powerful 
+functions including multiple covariance detection and sequence classification.
 
 ## Installation
 
@@ -41,43 +38,56 @@ Just [download](https://github.com/yanlilab/fastcov/releases) executable file
 You can also add the directory of the executable file to environment variable
 `PATH`, so you can run `fastcov` anywhere.
 
-1). For windows, the simplest way is copy it to `C:\WINDOWS\system32`.
+1. For windows, the simplest way is copy it to `C:\WINDOWS\system32`.
 
-2). For Linux, type:
+2. For Linux, type:
 
-```
-chmod a+x /PATH/OF/FASTCOV/fastcov
-echo export PATH=\$PATH:/PATH/OF/FASTCOV >> ~/.bashrc
-```
+        chmod a+x /PATH/OF/FASTCOV/fastcov
+        echo export PATH=\$PATH:/PATH/OF/FASTCOV >> ~/.bashrc
 
-or simply copy it to `/usr/local/bin`
+
+    or simply copy it to `/usr/local/bin`
 
 ## Usage
 
 ```
-usage: fastcov [-p ] [-d ] [-r ] [-c ] [-n ] [-o ] [-j ] [-h] INPUTFILE
+Name:
+  fastcov V1.01 -- Fast Covariant Mutation Detector
+  http://yanlilab.github.io/fastcov
 
-positional arguments:
-  inputfile
+Authors:
+  Yan Li   <liyan.com@gmail.com>
+  Wei Shen <shenwei356@gmail.com>
 
-options:
-  -p      minimum pairing purity of two sites [0.7]
-  -d      minimum associated degree [0.6]
-  -r      minimum matching ratio of to the pattern [0.45]
-  -n      minimum residue number at each site [5]
-  -c      minimum proportion of any sequence identical to the consensus [0.33]
-  -o      prefix of output files [inputfile]
-  -j      CPU number [CPU number of your computer]
-  -h      show help
+Usage:
+  fastcov [options] inputfile
+
+Available Options:
+  -p FLOAT                  minimum pairing purity of two sites [0.7]
+  -d FLOAT                  minimum associated degree [0.7]
+  -r FLOAT                  minimum matching ratio of to the pattern [0.45]
+  -n INT                    minimum residue number at each site [5]
+  -c FLOAT                  minimum proportion of any sequence identical to the
+                            consensus [0.33]
+  -o STRING                 prefix of output files [inputfile]
+  -j INT                    CPU number [CPU number of your computer]
+  -h, --help                show this help message
+
+Copyright:
+  Copyright © 2015-2016, All Rights Reserved
+  This software is free to distribute for academic research.
 ```
 
 #### Positional arguments
+
 - `inputfile` should be aligned protein sequences in FASTA format file,
  produced by multi sequence alignment softwares.
  Case is not sensitive.
 
- One-seq-per-line format could be converted to FASTA format by
- `for f in *.aln; do cat -n $f | awk '{print ">"$1"\n"$2}' > "$f.fas" `
+    One-seq-per-line format could be converted to FASTA format by
+
+        for f in *.aln; do cat -n $f | awk '{print ">"$1"\n"$2}' > $f.fas; done
+
 
 #### Options
 
@@ -85,7 +95,7 @@ Main algorithm parameters
 
 - `-p` defines the minimum pairing purity of two sites. Default is 0.7.
 - `-d` defined the minimum associated degree of one group of
-covariant mutation elements. Default is 0.6.
+covariant mutation elements. Default is 0.7.
 - `-r` defines the minimum matching ratio of to the pattern at
 clustering stage. Default is 0.45.
 
@@ -102,12 +112,11 @@ Output
 - `-o` defines the prefix of output files, default value is the same as input
  file. e.g, for a input file `test.fa`, output files will be:
 
-```
-test.aligned.fa.pairs
-test.aligned.fa.clusters
-test.aligned.fa.patterns
-test.aligned.fa.seq2patterns
-```
+        test.aligned.fa.pairs
+        test.aligned.fa.clusters
+        test.aligned.fa.patterns
+        test.aligned.fa.seq2patterns
+
 
 Performance
 
@@ -164,42 +173,45 @@ Output files:
     ABCD_RT_M.aligned.fas.clusters         # sequence clusters by covariant patterns
     ABCD_RT_M.aligned.fas.seq2patterns     # covariant patterns of every sequence
 
+**Note**: For windows user, please use a modern text editor to view the result files.
+Notepad is not recommended, [Notepad++](https://notepad-plus-plus.org/) is a better choice.
+
 [More examples](https://github.com/yanlilab/fastcov/tree/master/examples)
 
 ## Errors and Solutions
 
-1) No input file given. Please feed `fastcov` a aligned amino acids sequences in FASTA format.
+1. No input file given. Please feed `fastcov` a aligned amino acids sequences in FASTA format.
 
-```
-$ fastcov
-[Error] no input file (aligned amino acids sequences in FASTA format) given.
-type "fastcov -h" for help
-```
+        $ fastcov
+        [Error] no input file (aligned amino acids sequences in FASTA format) given.
+        type "fastcov -h" for help
 
-2) Input file is not aligned.
+2. Input file is not aligned.
 
-```
-[Error] sequence length not equal: 343 (AB014392_Pol-C) != 344.
-input file should be aligned amino acids sequences in FASTA format
-```
+        [Error] sequence length not equal: 343 (AB014392_Pol-C) != 344.
+        input file should be aligned amino acids sequences in FASTA format
 
-3) Illegal characters in sequence. FASTA parsing module of `fastcov` strictly
+3. Illegal characters in sequence. FASTA parsing module of `fastcov` strictly
  check the sequences, you may check input sequence according according to
  the IUPAC nucleotide code (http://www.bioinformatics.org/sms2/iupac.html).
  It may also be caused by unmatch of sequence type (PROTEIN) and actual
  sequence type (DNA) in FASTA file.
 
-```
-Input: test.fa
+        Input: test.fa
 
-Step 1/5: Reading sequences
-error when reading AB014367_Pol-C: invalid Protein sequence: AB014367_Pol-C
-```
+        Step 1/5: Reading sequences
+        error when reading AB014367_Pol-C: invalid Protein sequence: AB014367_Pol-C
+
 
 
 ## FAQ
 
 Please don't hesitate to email us.
+
+Q: What a mess when opening the result files!
+
+A: Microsoft Windows user may open the result files by Notepad provided by the Operating system.
+Please choose another moder text editor like [Notepad++](https://notepad-plus-plus.org/).
 
 
 ## Authors

@@ -1,43 +1,60 @@
-# fastcov
-Fast Covariant Mutation Detector. http://yanlilab.github.io/fastcov
+# Fastcov
+Fast Covariant Mutation Detector. [http://yanlilab.github.io/fastcov](http://yanlilab.github.io/fastcov)
 
 ## Introduction
 
-Covariant mutations are very important to maintain the structural
-characteristics and consequently to maintain the protein conformational and
-functional stability. In this study, we developed a novel algorithm to
-identify correlated changes by using an independent pair model followed by
-a correlated tandem model.
+Single genetic mutation always brings along with a set of compensatory mutations, 
+therefore multiple changes commonly occur in the biological sequences, 
+which play crucial roles to maintain the conformational and functional stability. 
+Although there are a lot of methods to detect single mutation or covariant pairs, 
+it is still a great challenge to explore the non-synchronous multiple changes
+at different sites in the sequences. 
 
-Fastcov is based on a correlation idea of interaction restriction
-among site-residue elements, which is very suitable for natural co-variances
-analysis. In contrast to other complex methods, the lightweight and fast
-Fastcov algorithm significantly improves the processing efficiency.
-
-By tests on the genotyping, phylogeny and divergence analysis, the results
-demonstrated that this approach has an excellent performance on detecting
-covariant residue patterns. Based on the covariant pattern clustering,
-the genotyping performance reached a sensitivity of 99.42%, a specificity
-of 99.94% and an accuracy of 99.77%; The covariant patterns displayed
-co-evolutionary modes corresponding to the phylogeny tree;
-Moreover, it found an important evidence involving in the structural stability
-of protein during the evolution. As an original algorithm, Fastcov provides
-not only a fast and reliable approach to achieve the data analysis,
-but also much more powerful functions including multiple variance detection
-and evolutionary classification.
+Here we developed a novel algorithm, named Fastcov, to identify multiple
+correlated changes of biological sequences, by using an independent pair 
+model followed by a tandem model of site-residue elements, based on a 
+inter-restriction thinking. The results showed that Fastcov has excellent
+performances on harvesting co-pairs and detecting multiple covariant patterns.
+By 10-fold cross-validation in different scales of datasets, 
+the characteristic patterns successfully classified the sequences into their
+target groups with an accuracy of 98% above. Moreover, it demonstrated the 
+multiple covariant patterns represented co-evolutionary modes, corresponding 
+to the phylogeny tree, and it provided new understanding of the structural
+stability of protein during the evolution. In contrast to other methods, 
+Fastcov, as an original algorithm, provides not only a reliable and effective
+approach to harvest covariant pairs of site-residues, but also more powerful 
+functions including multiple covariance detection and sequence classification.
 
 ## Install
- Fastcov is very easy to install, no dependencies are needed. It is implemented
-  in [Golang](https://golang.org/) programming language.
 
- Just download the single binary executable file of your platform in [release](https://github.com/yanlilab/fastcov/releases) page
- and run it in command-line interface.
+`fastcov` is implemented in [Golang](https://golang.org/) programming language,
+ executable binary files for most popular operating system are freely available
+  in [release](https://github.com/yanlilab/fastcov/releases) page.
+
+Just [download](https://github.com/yanlilab/fastcov/releases) executable file
+ of your operating system and rename it to  `fastcov.exe` (Windows) or
+ `fastcov` (other operating systems) for convenience, and then
+ run it in  command-line interface, no any dependency are needed.
+
+You can also add the directory of the executable file to environment variable
+`PATH`, so you can run `fastcov` anywhere.
+
+1. For windows, the simplest way is copy it to `C:\WINDOWS\system32`.
+
+2. For Linux, type:
+
+        chmod a+x /PATH/OF/FASTCOV/fastcov
+        echo export PATH=\$PATH:/PATH/OF/FASTCOV >> ~/.bashrc
+
+
+    or simply copy it to `/usr/local/bin`
 
 ## Usage
- See [MANUAL](https://github.com/yanlilab/fastcov/blob/master/MANUAL.md)
+
+See [MANUAL](http://yanlilab.github.io/fastcov/manual)
 
 ## Please cite
-Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (submitted)
+Wei Shen, Yan Li*. A novel algorithm for covariant analysis and clustering of biological sequences (submitted)
 
 
 ## Copyright
