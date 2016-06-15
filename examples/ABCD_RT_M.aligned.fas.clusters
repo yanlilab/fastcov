@@ -1,6 +1,6 @@
 Cluster 1: 392/3424 sequences with 1 pattern(s)
   Patterns:
-    163-V 217-R 253-I
+    163-V 217-R 253-I	minDegree: 0.7770 (253-I)
   Seqnames:
     AB014370_Pol-A
     AB064314_Pol-A
@@ -397,7 +397,7 @@ Cluster 1: 392/3424 sequences with 1 pattern(s)
 
 Cluster 2: 485/3424 sequences with 1 pattern(s)
   Patterns:
-    7-D 103-I 122-N 126-Y 139-Q 153-W 163-V 217-R
+    7-D 103-I 122-N 126-Y 139-Q 153-W 163-V 217-R	minDegree: 0.8159 (153-W)
   Seqnames:
     AB014370_Pol-A
     AB064314_Pol-A
@@ -887,7 +887,7 @@ Cluster 2: 485/3424 sequences with 1 pattern(s)
 
 Cluster 3: 588/3424 sequences with 1 pattern(s)
   Patterns:
-    53-I 103-I 139-Q
+    53-I 103-I 139-Q	minDegree: 0.7775 (53-I)
   Seqnames:
     AB014370_Pol-A
     AB064314_Pol-A
@@ -1480,7 +1480,7 @@ Cluster 3: 588/3424 sequences with 1 pattern(s)
 
 Cluster 4: 741/3424 sequences with 1 pattern(s)
   Patterns:
-    54-Y 122-F 149-Q 257-Y 259-S
+    54-Y 122-F 149-Q 257-Y 259-S	minDegree: 0.7500 (54-Y)
   Seqnames:
     AB090268_Pol-D
     AB090269_Pol-D.
@@ -2226,7 +2226,7 @@ Cluster 4: 741/3424 sequences with 1 pattern(s)
 
 Cluster 5: 742/3424 sequences with 1 pattern(s)
   Patterns:
-    256-C 257-Y 259-S
+    256-C 257-Y 259-S	minDegree: 0.7265 (256-C)
   Seqnames:
     AB014362_Pol-C
     AB090268_Pol-D
@@ -2973,7 +2973,7 @@ Cluster 5: 742/3424 sequences with 1 pattern(s)
 
 Cluster 6: 749/3424 sequences with 1 pattern(s)
   Patterns:
-    7-A 122-F 149-Q 257-Y 259-S 266-I
+    7-A 122-F 149-Q 257-Y 259-S 266-I	minDegree: 0.7622 (266-I)
   Seqnames:
     AB090268_Pol-D
     AB090269_Pol-D.
@@ -3727,7 +3727,7 @@ Cluster 6: 749/3424 sequences with 1 pattern(s)
 
 Cluster 7: 927/3424 sequences with 1 pattern(s)
   Patterns:
-    13-N 223-S 224-I
+    13-N 223-S 224-I	minDegree: 0.8285 (13-N)
   Seqnames:
     AB014360_Pol-C
     AB014362_Pol-C
@@ -4659,7 +4659,7 @@ Cluster 7: 927/3424 sequences with 1 pattern(s)
 
 Cluster 8: 958/3424 sequences with 1 pattern(s)
   Patterns:
-    13-R 16-T 127-R 222-A 238-H
+    13-R 16-T 127-R 222-A 238-H	minDegree: 0.8718 (222-A)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -5622,7 +5622,7 @@ Cluster 8: 958/3424 sequences with 1 pattern(s)
 
 Cluster 9: 1105/3424 sequences with 1 pattern(s)
   Patterns:
-    53-S 55-H 109-P 118-T 121-N 131-D 223-S 224-I
+    53-S 55-H 109-P 118-T 121-N 131-D 223-S 224-I	minDegree: 0.8451 (223-S)
   Seqnames:
     AB014360_Pol-C
     AB014362_Pol-C
@@ -6732,7 +6732,7 @@ Cluster 9: 1105/3424 sequences with 1 pattern(s)
 
 Cluster 10: 1551/3424 sequences with 1 pattern(s)
   Patterns:
-    124-N 145-M 151-Y 332-S
+    124-N 145-M 151-Y 332-S	minDegree: 0.8530 (124-N)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -8288,7 +8288,7 @@ Cluster 10: 1551/3424 sequences with 1 pattern(s)
 
 Cluster 11: 1572/3424 sequences with 1 pattern(s)
   Patterns:
-    145-M 151-Y 221-Y 317-A 332-S
+    145-M 151-Y 221-Y 317-A 332-S	minDegree: 0.8353 (317-A)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -9865,7 +9865,7 @@ Cluster 11: 1572/3424 sequences with 1 pattern(s)
 
 Cluster 12: 1591/3424 sequences with 1 pattern(s)
   Patterns:
-    16-T 145-M 151-Y 221-Y
+    16-T 145-M 151-Y 221-Y	minDegree: 0.7367 (16-T)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -11461,7 +11461,7 @@ Cluster 12: 1591/3424 sequences with 1 pattern(s)
 
 Cluster 13: 1841/3424 sequences with 1 pattern(s)
   Patterns:
-    145-L 151-F 221-F 317-S 332-C
+    145-L 151-F 221-F 317-S 332-C	minDegree: 0.8287 (317-S)
   Seqnames:
     AB014360_Pol-C
     AB014362_Pol-C
@@ -13307,7 +13307,7 @@ Cluster 13: 1841/3424 sequences with 1 pattern(s)
 
 Cluster 14: 1865/3424 sequences with 1 pattern(s)
   Patterns:
-    124-Y 145-L 151-F 332-C
+    124-Y 145-L 151-F 332-C	minDegree: 0.7130 (124-Y)
   Seqnames:
     AB014360_Pol-C
     AB014362_Pol-C
@@ -15177,7 +15177,7 @@ Cluster 14: 1865/3424 sequences with 1 pattern(s)
 
 Cluster 15: 2322/3424 sequences with 1 pattern(s)
   Patterns:
-    53-N 55-R 109-S 118-N 121-I 131-N 223-A 224-V
+    53-N 55-R 109-S 118-N 121-I 131-N 223-A 224-V	minDegree: 0.7737 (53-N)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -17504,7 +17504,7 @@ Cluster 15: 2322/3424 sequences with 1 pattern(s)
 
 Cluster 16: 2459/3424 sequences with 1 pattern(s)
   Patterns:
-    13-H 16-I 127-G 222-T 238-N
+    13-H 16-I 127-G 222-T 238-N	minDegree: 0.7528 (13-H)
   Seqnames:
     AB014360_Pol-C
     AB014362_Pol-C
@@ -19968,7 +19968,7 @@ Cluster 16: 2459/3424 sequences with 1 pattern(s)
 
 Cluster 17: 2620/3424 sequences with 1 pattern(s)
   Patterns:
-    256-S 257-W 259-T
+    256-S 257-W 259-T	minDegree: 0.8955 (256-S)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -22593,7 +22593,7 @@ Cluster 17: 2620/3424 sequences with 1 pattern(s)
 
 Cluster 18: 2644/3424 sequences with 1 pattern(s)
   Patterns:
-    149-K 257-W 259-T 266-V
+    149-K 257-W 259-T 266-V	minDegree: 0.9507 (266-V)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -25242,7 +25242,7 @@ Cluster 18: 2644/3424 sequences with 1 pattern(s)
 
 Cluster 19: 2659/3424 sequences with 1 pattern(s)
   Patterns:
-    54-T 122-I 149-K 248-N 257-W 259-T
+    54-T 122-I 149-K 248-N 257-W 259-T	minDegree: 0.7152 (248-N)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -27906,7 +27906,7 @@ Cluster 19: 2659/3424 sequences with 1 pattern(s)
 
 Cluster 20: 2895/3424 sequences with 1 pattern(s)
   Patterns:
-    7-T 103-V 122-I 126-H 139-N 153-R 163-I 217-L
+    7-T 103-V 122-I 126-H 139-N 153-R 163-I 217-L	minDegree: 0.8183 (7-T)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B
@@ -30806,7 +30806,7 @@ Cluster 20: 2895/3424 sequences with 1 pattern(s)
 
 Cluster 21: 2910/3424 sequences with 1 pattern(s)
   Patterns:
-    122-I 126-H 139-N 153-R 163-I 217-L 253-V
+    122-I 126-H 139-N 153-R 163-I 217-L 253-V	minDegree: 0.7527 (253-V)
   Seqnames:
     AB010289_Pol-B
     AB010290_Pol-B

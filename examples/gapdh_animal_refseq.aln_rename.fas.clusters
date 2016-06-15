@@ -1,6 +1,6 @@
 Cluster 1: 13/112 sequences with 1 pattern(s)
   Patterns:
-    22-G 41-E 65-D 78-H 325-C
+    22-G 41-E 65-D 78-H 325-C	minDegree: 0.7808 (22-G)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Cynoglossus_semilaevis|XP_008320975.1
@@ -18,7 +18,7 @@ Cluster 1: 13/112 sequences with 1 pattern(s)
 
 Cluster 2: 16/112 sequences with 1 pattern(s)
   Patterns:
-    65-D 70-D 78-H 176-S 325-C
+    65-D 70-D 78-H 176-S 325-C	minDegree: 0.7422 (65-D)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Cynoglossus_semilaevis|XP_008320975.1
@@ -39,7 +39,7 @@ Cluster 2: 16/112 sequences with 1 pattern(s)
 
 Cluster 3: 19/112 sequences with 1 pattern(s)
   Patterns:
-    29-E 59-E 64-G 70-D 76-V 146-V 176-S 294-I
+    29-E 59-E 64-G 70-D 76-V 146-V 176-S 294-I	minDegree: 0.7256 (29-E)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Clupea_harengus|XP_012684628.1
@@ -63,7 +63,7 @@ Cluster 3: 19/112 sequences with 1 pattern(s)
 
 Cluster 4: 19/112 sequences with 1 pattern(s)
   Patterns:
-    8-I 26-K 41-E 59-E 64-G 70-D 76-V 105-I 109-S 146-V 176-S 203-S 247-V 284-T 294-I 325-C
+    8-I 26-K 41-E 59-E 64-G 70-D 76-V 105-I 109-S 146-V 176-S 203-S 247-V 284-T 294-I 325-C	minDegree: 0.7708 (8-I)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Clupea_harengus|XP_012684628.1
@@ -87,7 +87,7 @@ Cluster 4: 19/112 sequences with 1 pattern(s)
 
 Cluster 5: 21/112 sequences with 1 pattern(s)
   Patterns:
-    24-L 29-Q 55-H 57-R 260-R 275-A 318-Y
+    24-L 29-Q 55-H 57-R 260-R 275-A 318-Y	minDegree: 0.7492 (318-Y)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -113,7 +113,7 @@ Cluster 5: 21/112 sequences with 1 pattern(s)
 
 Cluster 6: 21/112 sequences with 1 pattern(s)
   Patterns:
-    55-R 59-E 64-G 70-D 76-V 105-I 109-S 146-V 176-S 247-V 294-I
+    55-R 59-E 64-G 70-D 76-V 105-I 109-S 146-V 176-S 247-V 294-I	minDegree: 0.7985 (55-R)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Clupea_harengus|XP_012684628.1
@@ -139,7 +139,7 @@ Cluster 6: 21/112 sequences with 1 pattern(s)
 
 Cluster 7: 21/112 sequences with 1 pattern(s)
   Patterns:
-    165-N 270-M 284-T 294-I 325-C
+    165-N 270-M 284-T 294-I 325-C	minDegree: 0.7507 (165-N)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Cynoglossus_semilaevis|XP_008320975.1
@@ -165,7 +165,7 @@ Cluster 7: 21/112 sequences with 1 pattern(s)
 
 Cluster 8: 22/112 sequences with 1 pattern(s)
   Patterns:
-    30-V 55-H 260-R
+    30-V 55-H 260-R	minDegree: 0.7210 (30-V)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -192,12 +192,12 @@ Cluster 8: 22/112 sequences with 1 pattern(s)
 
 Cluster 9: 4/112 sequences with 6 pattern(s)
   Patterns:
-    24-E 142-P 264-E
-    4-S 25-K 78-S 142-P 181-T 264-E 328-I
-    181-T 328-I 329-K
-    83-K 142-P 264-E
-    75-A 78-S 89-K 328-I
-    89-K 142-P 264-E 328-I
+    181-T 328-I 329-K	minDegree: 0.8035 (181-T)
+    83-K 142-P 264-E	minDegree: 0.8570 (83-K)
+    89-K 142-P 264-E 328-I	minDegree: 0.8213 (89-K)
+    4-S 25-K 78-S 142-P 181-T 264-E 328-I	minDegree: 0.8278 (78-S)
+    75-A 78-S 89-K 328-I	minDegree: 0.7667 (78-S)
+    24-E 142-P 264-E	minDegree: 0.7500 (24-E)
   Seqnames:
     Insect_bee||Apis_mellifera|XP_393605.1
     Insect||Bombyx_mori|NP_001037386.1
@@ -206,8 +206,8 @@ Cluster 9: 4/112 sequences with 6 pattern(s)
 
 Cluster 10: 17/112 sequences with 2 pattern(s)
   Patterns:
-    3-K 84-K 113-Q 203-L 238-A 284-S
-    73-P 84-K 203-L 238-A
+    3-K 84-K 113-Q 203-L 238-A 284-S	minDegree: 0.8192 (284-S)
+    73-P 84-K 203-L 238-A	minDegree: 0.7407 (73-P)
   Seqnames:
     Mammal_primate_ape||Gorilla_gorilla_gorilla|XP_004052609.1
     Mammal_primate_ape||Pan_paniscus|XP_008971979.1
@@ -229,7 +229,7 @@ Cluster 10: 17/112 sequences with 2 pattern(s)
 
 Cluster 11: 47/112 sequences with 1 pattern(s)
   Patterns:
-    48-K 142-K 264-A 266-A 288-G 311-V
+    48-K 142-K 264-A 266-A 288-G 311-V	minDegree: 0.7742 (142-K)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -281,7 +281,7 @@ Cluster 11: 47/112 sequences with 1 pattern(s)
 
 Cluster 12: 47/112 sequences with 1 pattern(s)
   Patterns:
-    288-G 290-S 311-V
+    288-G 290-S 311-V	minDegree: 0.7170 (290-S)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -333,9 +333,9 @@ Cluster 12: 47/112 sequences with 1 pattern(s)
 
 Cluster 13: 17/112 sequences with 3 pattern(s)
   Patterns:
-    26-K 41-E 59-E 64-G 70-D 76-V 78-H 105-I 109-S 146-V 176-S 203-S 247-V 284-T 294-I 325-C
-    171-I 176-S 203-S 247-V 325-C
-    89-E 105-I 176-S 203-S 325-C
+    89-E 105-I 176-S 203-S 325-C	minDegree: 0.7408 (89-E)
+    171-I 176-S 203-S 247-V 325-C	minDegree: 0.7853 (171-I)
+    26-K 41-E 59-E 64-G 70-D 76-V 78-H 105-I 109-S 146-V 176-S 203-S 247-V 284-T 294-I 325-C	minDegree: 0.7375 (78-H)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Clupea_harengus|XP_012684628.1
@@ -357,7 +357,7 @@ Cluster 13: 17/112 sequences with 3 pattern(s)
 
 Cluster 14: 63/112 sequences with 1 pattern(s)
   Patterns:
-    288-S 290-T 311-I
+    288-S 290-T 311-I	minDegree: 0.8270 (290-T)
   Seqnames:
     Insect||Drosophila_melanogaster|NP_525108.2
     Insect||Plutella_xylostella|NP_001296051.1
@@ -425,7 +425,7 @@ Cluster 14: 63/112 sequences with 1 pattern(s)
 
 Cluster 15: 63/112 sequences with 1 pattern(s)
   Patterns:
-    48-Q 142-N 264-Q 266-S 288-S 311-I
+    48-Q 142-N 264-Q 266-S 288-S 311-I	minDegree: 0.8500 (142-N)
   Seqnames:
     Insect||Drosophila_melanogaster|NP_525108.2
     Mammal_aardvark||Orycteropus_afer_afer|XP_007935286.1
@@ -493,7 +493,7 @@ Cluster 15: 63/112 sequences with 1 pattern(s)
 
 Cluster 16: 67/112 sequences with 1 pattern(s)
   Patterns:
-    83-A 142-N 264-Q
+    83-A 142-N 264-Q	minDegree: 0.7030 (83-A)
   Seqnames:
     Fish||Clupea_harengus|XP_012684628.1
     Fish||Danio_rerio|NP_001108586.1
@@ -565,7 +565,7 @@ Cluster 16: 67/112 sequences with 1 pattern(s)
 
 Cluster 17: 68/112 sequences with 1 pattern(s)
   Patterns:
-    24-N 29-D 55-K 57-H 260-K 275-G 318-F
+    24-N 29-D 55-K 57-H 260-K 275-G 318-F	minDegree: 0.7450 (57-H)
   Seqnames:
     Fish||Clupea_harengus|XP_012684628.1
     Fish||Cyprinodon_variegatus|XP_015226321.1
@@ -638,7 +638,7 @@ Cluster 17: 68/112 sequences with 1 pattern(s)
 
 Cluster 18: 80/112 sequences with 1 pattern(s)
   Patterns:
-    30-I 55-K 260-K
+    30-I 55-K 260-K	minDegree: 0.8265 (55-K)
   Seqnames:
     Fish||Austrofundulus_limnaeus|XP_013868039.1
     Fish||Clupea_harengus|XP_012684628.1
@@ -723,7 +723,7 @@ Cluster 18: 80/112 sequences with 1 pattern(s)
 
 Cluster 19: 87/112 sequences with 1 pattern(s)
   Patterns:
-    165-H 270-L 284-C 294-T 325-V
+    165-H 270-L 284-C 294-T 325-V	minDegree: 0.8447 (284-C)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -815,7 +815,7 @@ Cluster 19: 87/112 sequences with 1 pattern(s)
 
 Cluster 20: 88/112 sequences with 1 pattern(s)
   Patterns:
-    89-D 105-M 176-T 203-A 325-V
+    89-D 105-M 176-T 203-A 325-V	minDegree: 0.8515 (203-A)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -908,7 +908,7 @@ Cluster 20: 88/112 sequences with 1 pattern(s)
 
 Cluster 21: 90/112 sequences with 1 pattern(s)
   Patterns:
-    29-D 55-K 59-T 64-N 70-N 76-I 146-I 176-T 294-T
+    29-D 55-K 59-T 64-N 70-N 76-I 146-I 176-T 294-T	minDegree: 0.7612 (29-D)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1003,7 +1003,7 @@ Cluster 21: 90/112 sequences with 1 pattern(s)
 
 Cluster 22: 91/112 sequences with 1 pattern(s)
   Patterns:
-    55-K 59-T 64-N 70-N 76-I 105-M 109-G 146-I 176-T 247-C 270-L 294-T
+    55-K 59-T 64-N 70-N 76-I 105-M 109-G 146-I 176-T 247-C 270-L 294-T	minDegree: 0.7940 (55-K)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1099,7 +1099,7 @@ Cluster 22: 91/112 sequences with 1 pattern(s)
 
 Cluster 23: 93/112 sequences with 1 pattern(s)
   Patterns:
-    171-V 176-T 203-A 247-C 325-V
+    171-V 176-T 203-A 247-C 325-V	minDegree: 0.8530 (203-A)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1197,7 +1197,7 @@ Cluster 23: 93/112 sequences with 1 pattern(s)
 
 Cluster 24: 94/112 sequences with 1 pattern(s)
   Patterns:
-    65-G 70-N 78-Q 176-T 325-V
+    65-G 70-N 78-Q 176-T 325-V	minDegree: 0.9572 (65-G)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1296,7 +1296,7 @@ Cluster 24: 94/112 sequences with 1 pattern(s)
 
 Cluster 25: 96/112 sequences with 1 pattern(s)
   Patterns:
-    22-A 41-N 65-G 78-Q 171-V 325-V
+    22-A 41-N 65-G 78-Q 171-V 325-V	minDegree: 0.7408 (171-V)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1397,7 +1397,7 @@ Cluster 25: 96/112 sequences with 1 pattern(s)
 
 Cluster 26: 103/112 sequences with 1 pattern(s)
   Patterns:
-    4-V 25-S 78-Q 142-N 181-I 264-Q 328-M
+    4-V 25-S 78-Q 142-N 181-I 264-Q 328-M	minDegree: 0.7803 (264-Q)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1505,7 +1505,7 @@ Cluster 26: 103/112 sequences with 1 pattern(s)
 
 Cluster 27: 107/112 sequences with 1 pattern(s)
   Patterns:
-    75-T 78-Q 89-D 328-M
+    75-T 78-Q 89-D 328-M	minDegree: 0.8523 (75-T)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1617,8 +1617,8 @@ Cluster 27: 107/112 sequences with 1 pattern(s)
 
 Cluster 28: 90/112 sequences with 2 pattern(s)
   Patterns:
-    8-V 26-G 41-N 59-T 64-N 70-N 76-I 105-M 109-G 146-I 176-T 203-A 247-C 270-L 284-C 294-T 325-V
-    26-G 41-N 59-T 64-N 70-N 76-I 78-Q 105-M 109-G 146-I 176-T 203-A 247-C 270-L 284-C 294-T 325-V
+    26-G 41-N 59-T 64-N 70-N 76-I 78-Q 105-M 109-G 146-I 176-T 203-A 247-C 270-L 284-C 294-T 325-V	minDegree: 0.7373 (270-L)
+    8-V 26-G 41-N 59-T 64-N 70-N 76-I 105-M 109-G 146-I 176-T 203-A 247-C 270-L 284-C 294-T 325-V	minDegree: 0.7919 (270-L)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
@@ -1713,8 +1713,8 @@ Cluster 28: 90/112 sequences with 2 pattern(s)
 
 Cluster 29: 92/112 sequences with 2 pattern(s)
   Patterns:
-    3-M 84-N 113-K 203-A 238-P 284-C
-    73-A 84-N 203-A 238-P
+    73-A 84-N 203-A 238-P	minDegree: 0.7303 (73-A)
+    3-M 84-N 113-K 203-A 238-P 284-C	minDegree: 0.8632 (284-C)
   Seqnames:
     Bird_chicken||Gallus_gallus|NP_989636.1
     Bird_chicken||Meleagris_gallopavo|NP_001290108.1
