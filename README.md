@@ -1,29 +1,24 @@
 # Fastcov
-Fast Covariant Mutation Detector. [http://yanlilab.github.io/fastcov](http://yanlilab.github.io/fastcov)
+Fast Multiple Covariance Detector. [http://yanlilab.github.io/fastcov](http://yanlilab.github.io/fastcov)
 
 ## Introduction
 
-Single genetic mutation always brings along with a set of compensatory mutations,
-therefore multiple changes commonly occur in the biological sequences,
-which play crucial roles to maintain the conformational and functional stability.
-Although there are a lot of methods to detect single mutation or covariant pairs,
-it is still a great challenge to explore the non-synchronous multiple changes
-at different sites in the sequences.
-
-Here we developed a novel algorithm, named Fastcov, to identify multiple
-correlated changes of biological sequences, by using an independent pair
-model followed by a tandem model of site-residue elements, based on a
-inter-restriction thinking. The results showed that Fastcov has excellent
-performances on harvesting co-pairs and detecting multiple covariant patterns.
-By 10-fold cross-validation in different scales of datasets,
-the characteristic patterns successfully classified the sequences into their
-target groups with an accuracy of 98% above. Moreover, it demonstrated the
-multiple covariant patterns represented co-evolutionary modes, corresponding
-to the phylogeny tree, and it provided new understanding of the structural
-stability of protein during the evolution. In contrast to other methods,
-Fastcov, as an original algorithm, provides not only a reliable and effective
-approach to harvest covariant pairs of site-residues, but also more powerful
-functions including multiple covariance detection and sequence classification.
+Single genetic mutations are always followed by a set of compensatory mutations. Thus,
+multiple changes commonly occur in biological sequences and play crucial roles in maintaining
+conformational and functional stability. Although many methods are available to detect single
+mutations or covariant pairs, detecting non-synchronous multiple changes at different sites in
+sequences remains challenging. Here, we develop a novel algorithm, named Fastcov, to identify
+multiple correlated changes in biological sequences using an independent pair model followed by
+a tandem model of site-residue elements based on inter-restriction thinking. Fastcov performed
+exceptionally well at harvesting co-pairs and detecting multiple covariant patterns. By 10-fold
+cross-validation using datasets of different scales, the characteristic patterns successfully classified
+the sequences into target groups with an accuracy of greater than 98%. Moreover, we
+demonstrated that the multiple covariant patterns represent co-evolutionary modes corresponding
+to the phylogenetic tree, and provide a new understanding of protein structural stability. In contrast
+to other methods, Fastcov provides not only a reliable and effective approach to identify covariant
+pairs but also more powerful functions, including multiple covariance detection and sequence
+classification, that are most useful for studying the point and compensatory mutations caused by
+natural selection, drug induction, environmental pressure, etc.
 
 ## Install
 
@@ -34,7 +29,8 @@ Visit [download page](http://yanlilab.github.io/fastcov/download/).
 Read [manual](http://yanlilab.github.io/fastcov/manual).
 
 ## Please cite
-Wei Shen, Yan Li*. A novel algorithm for covariant analysis and clustering of biological sequences (submitted)
+
+Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (submitted)
 
 ## Copyright
 Copyright © 2015-2016, All Rights Reserved.

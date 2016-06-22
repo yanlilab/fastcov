@@ -1,56 +1,11 @@
-# fastcov - Fast Covariant Mutation Detector v1.02
+# Fastcov - Fast Multiple Covariance Detector v1.03
 
-## Introduction
-
-Single genetic mutation always brings along with a set of compensatory mutations,
-therefore multiple changes commonly occur in the biological sequences,
-which play crucial roles to maintain the conformational and functional stability.
-Although there are a lot of methods to detect single mutation or covariant pairs,
-it is still a great challenge to explore the non-synchronous multiple changes
-at different sites in the sequences.
-
-Here we developed a novel algorithm, named Fastcov, to identify multiple
-correlated changes of biological sequences, by using an independent pair
-model followed by a tandem model of site-residue elements, based on a
-inter-restriction thinking. The results showed that Fastcov has excellent
-performances on harvesting co-pairs and detecting multiple covariant patterns.
-By 10-fold cross-validation in different scales of datasets,
-the characteristic patterns successfully classified the sequences into their
-target groups with an accuracy of 98% above. Moreover, it demonstrated the
-multiple covariant patterns represented co-evolutionary modes, corresponding
-to the phylogeny tree, and it provided new understanding of the structural
-stability of protein during the evolution. In contrast to other methods,
-Fastcov, as an original algorithm, provides not only a reliable and effective
-approach to harvest covariant pairs of site-residues, but also more powerful
-functions including multiple covariance detection and sequence classification.
-
-## Installation
-
-Visit [download page](http://yanlilab.github.io/fastcov/download/).
-
-`fastcov` is implemented in [Golang](https://golang.org/) programming language,
- executable binary files for most popular operating system are freely available.
-
-Just download executable file, uncompress it with `tar -zxvf *.tar.gz command`,
-and then run it in command-line interface, no any dependency are needed.
-
-You can also add the directory of the executable file to environment variable
-`PATH`, so you can run `fastcov` anywhere.
-
-1. For windows, the simplest way is copy it to `C:\WINDOWS\system32`.
-
-2. For Linux, type:
-
-        chmod a+x /PATH/OF/FASTCOV/fastcov
-        echo export PATH=\$PATH:/PATH/OF/FASTCOV >> ~/.bashrc
-
-    or simply copy it to `/usr/local/bin`
 
 ## Usage
 
 ```
 Name:
-  fastcov V1.02 -- Fast Covariant Mutation Detector
+  fastcov V1.03 -- Fast Multiple Covariance Detector
   http://yanlilab.github.io/fastcov
 
 Authors:
@@ -62,7 +17,6 @@ Usage:
 
 Available Options:
   -p FLOAT                  minimum pairing purity of two sites [0.7]
-  -d FLOAT                  minimum associated degree [0.7]
   -r FLOAT                  minimum matching ratio of to the pattern [0.45]
   -n INT                    minimum residue number at each site [5]
   -c FLOAT                  minimum proportion of any sequence identical to the
@@ -92,8 +46,6 @@ Copyright:
 Main algorithm parameters
 
 - `-p` defines the minimum pairing purity of two sites. Default is 0.7.
-- `-d` defined the minimum associated degree of one group of
-covariant mutation elements. Default is 0.7.
 - `-r` defines the minimum matching ratio of to the pattern at
 clustering stage. Default is 0.45.
 
@@ -110,10 +62,10 @@ Output
 - `-o` defines the prefix of output files, default value is the same as input
  file. e.g, for a input file `test.fa`, output files will be:
 
-        test.aligned.fa.pairs
-        test.aligned.fa.clusters
-        test.aligned.fa.patterns
-        test.aligned.fa.seq2patterns
+        test.aligned.fa.pairs.txt
+        test.aligned.fa.clusters.txt
+        test.aligned.fa.patterns.txt
+        test.aligned.fa.seq2patterns.txt
 
 
 Performance
@@ -166,10 +118,10 @@ The most time-consuming stage is `step 3`, so we add a process bar.
 
 Output files:
 
-    ABCD_RT_M.aligned.fas.pairs            # covariant pairs information
-    ABCD_RT_M.aligned.fas.patterns         # covariant patterns
-    ABCD_RT_M.aligned.fas.clusters         # sequence clusters by covariant patterns
-    ABCD_RT_M.aligned.fas.seq2patterns     # covariant patterns of every sequence
+    ABCD_RT_M.aligned.fas.pairs.txt            # covariant pairs information, table file, could be imported to MS Excel
+    ABCD_RT_M.aligned.fas.patterns.txt         # covariant patterns, table file, could be imported to MS Excel
+    ABCD_RT_M.aligned.fas.clusters.txt         # sequence clusters by covariant patterns
+    ABCD_RT_M.aligned.fas.seq2patterns.txt     # covariant patterns of every sequence, table file, could be imported to MS Excel
 
 **Note**: For windows user, please use a modern text editor to view the result files.
 Notepad is not recommended, [Notepad++](https://notepad-plus-plus.org/) is a better choice.
