@@ -1,0 +1,114 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Fastcov\n\n\nFast Multiple Covariance Detector. \nhttp://yanlilab.github.io/fastcov\n\n\nIntroduction\n\n\nSingle genetic mutations are always followed by a set of compensatory mutations. Thus,\nmultiple changes commonly occur in biological sequences and play crucial roles in maintaining\nconformational and functional stability. Although many methods are available to detect single\nmutations or covariant pairs, detecting non-synchronous multiple changes at different sites in\nsequences remains challenging. Here, we develop a novel algorithm, named Fastcov, to identify\nmultiple correlated changes in biological sequences using an independent pair model followed by\na tandem model of site-residue elements based on inter-restriction thinking. Fastcov performed\nexceptionally well at harvesting co-pairs and detecting multiple covariant patterns. By 10-fold\ncross-validation using datasets of different scales, the characteristic patterns successfully classified\nthe sequences into target groups with an accuracy of greater than 98%. Moreover, we\ndemonstrated that the multiple covariant patterns represent co-evolutionary modes corresponding\nto the phylogenetic tree, and provide a new understanding of protein structural stability. In contrast\nto other methods, Fastcov provides not only a reliable and effective approach to identify covariant\npairs but also more powerful functions, including multiple covariance detection and sequence\nclassification, that are most useful for studying the point and compensatory mutations caused by\nnatural selection, drug induction, environmental pressure, etc.\n\n\nInstall\n\n\nVisit \ndownload page\n.\n\n\nUsage\n\n\nRead \nmanual\n.\n\n\nCitation\n\n\nWei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)\n\n\nCopyright\n\n\nCopyright \u00a9 2015-2016, All Rights Reserved.\n\n\nThis software is free to distribute for academic research.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#fastcov", 
+            "text": "Fast Multiple Covariance Detector.  http://yanlilab.github.io/fastcov", 
+            "title": "Fastcov"
+        }, 
+        {
+            "location": "/#introduction", 
+            "text": "Single genetic mutations are always followed by a set of compensatory mutations. Thus,\nmultiple changes commonly occur in biological sequences and play crucial roles in maintaining\nconformational and functional stability. Although many methods are available to detect single\nmutations or covariant pairs, detecting non-synchronous multiple changes at different sites in\nsequences remains challenging. Here, we develop a novel algorithm, named Fastcov, to identify\nmultiple correlated changes in biological sequences using an independent pair model followed by\na tandem model of site-residue elements based on inter-restriction thinking. Fastcov performed\nexceptionally well at harvesting co-pairs and detecting multiple covariant patterns. By 10-fold\ncross-validation using datasets of different scales, the characteristic patterns successfully classified\nthe sequences into target groups with an accuracy of greater than 98%. Moreover, we\ndemonstrated that the multiple covariant patterns represent co-evolutionary modes corresponding\nto the phylogenetic tree, and provide a new understanding of protein structural stability. In contrast\nto other methods, Fastcov provides not only a reliable and effective approach to identify covariant\npairs but also more powerful functions, including multiple covariance detection and sequence\nclassification, that are most useful for studying the point and compensatory mutations caused by\nnatural selection, drug induction, environmental pressure, etc.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#install", 
+            "text": "Visit  download page .", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/#usage", 
+            "text": "Read  manual .", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/#citation", 
+            "text": "Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)", 
+            "title": "Citation"
+        }, 
+        {
+            "location": "/#copyright", 
+            "text": "Copyright \u00a9 2015-2016, All Rights Reserved.  This software is free to distribute for academic research.", 
+            "title": "Copyright"
+        }, 
+        {
+            "location": "/download/", 
+            "text": "Latest version\n\n\nFastcov V1.03\n\n\n\n\nWindows\n\n\nfastcov-V1.03_windows_386.exe.tar.gz\n\n\nfastcov-V1.03_windows_amd64.exe.tar.gz\n\n\n\n\n\n\nLinux\n\n\nfastcov-V1.03_linux_386.tar.gz\n\n\nfastcov-V1.03_linux_amd64.tar.gz\n\n\nfastcov-V1.03_linux_arm.tar.gz\n\n\n\n\n\n\nMac OS X\n\n\nfastcov-V1.03_darwin_386.tar.gz\n\n\nfastcov-V1.03_darwin_amd64.tar.gz\n\n\n\n\n\n\nFreeBSD\n\n\nfastcov-V1.03_freebsd_386.tar.gz\n\n\nfastcov-V1.03_freebsd_amd64.tar.gz\n\n\nfastcov-V1.03_freebsd_arm.tar.gz\n\n\n\n\n\n\nNetBSD\n\n\nfastcov-V1.03_netbsd_386.tar.gz\n\n\nfastcov-V1.03_netbsd_amd64.tar.gz\n\n\nfastcov-V1.03_netbsd_arm.tar.gz\n\n\n\n\n\n\nOpenBSD\n\n\nfastcov-V1.03_openbsd_386.tar.gz\n\n\nfastcov-V1.03_openbsd_amd64.tar.gz\n\n\n\n\n\n\n\n\nExamples: \nfastcov-examples.tar.gz\n\n\nInstallation\n\n\nfastcov\n is implemented in \nGolang\n programming language,\n executable binary files for most popular operating system are freely available.\n\n\nJust download compressed executable file of your operating system,\nand uncompress it with \ntar -zxvf *.tar.gz\n command or other tools.\nAnd then:\n\n\n\n\n\n\nFor Linux-like systems\n\n\n\n\n\n\nIf you have root privilege, simply copy it to \n/usr/local/bin\n:\n\n\nsudo cp fastcov /usr/local/bin/\n\n\n\n\n\n\n\nOr add the directory of the executable file to environment variable\n\nPATH\n:\n\n\necho export PATH=\\$PATH:/PATH/OF/fastcov \n ~/.bashrc\n\n\n\n\n\n\n\n\n\n\n\nFor windows\n, just copy \nfastcov.exe\n to \nC:\\WINDOWS\\system32\n.\n\n\n\n\n\n\nRelease notes\n\n\n\n\nV1.03\n\n\nAdd column \nAvg.Degree\n to \n.patterns.txt\n file\n\n\nRemove option \n-d\n\n\nUpdate documents\n\n\n\n\n\n\nV1.02\n\n\nAdd file name suffix \n.txt\n to all result files\n\n\nAdd degree information to \n.patterns.txt\n file\n\n\nUpdate documents\n\n\n\n\n\n\nV1.01\n\n\nFix a bug: sequence number of every cluster was repeatly counted in sequencing output.\n\n\nAdd support for non-standard amino acid J.\n\n\nShorten the option flags.\n\n\nPackaging example sequences and documents in release archive files.\n\n\n\n\n\n\nV1.0\n\n\nFirst version", 
+            "title": "Download"
+        }, 
+        {
+            "location": "/download/#latest-version", 
+            "text": "Fastcov V1.03   Windows  fastcov-V1.03_windows_386.exe.tar.gz  fastcov-V1.03_windows_amd64.exe.tar.gz    Linux  fastcov-V1.03_linux_386.tar.gz  fastcov-V1.03_linux_amd64.tar.gz  fastcov-V1.03_linux_arm.tar.gz    Mac OS X  fastcov-V1.03_darwin_386.tar.gz  fastcov-V1.03_darwin_amd64.tar.gz    FreeBSD  fastcov-V1.03_freebsd_386.tar.gz  fastcov-V1.03_freebsd_amd64.tar.gz  fastcov-V1.03_freebsd_arm.tar.gz    NetBSD  fastcov-V1.03_netbsd_386.tar.gz  fastcov-V1.03_netbsd_amd64.tar.gz  fastcov-V1.03_netbsd_arm.tar.gz    OpenBSD  fastcov-V1.03_openbsd_386.tar.gz  fastcov-V1.03_openbsd_amd64.tar.gz     Examples:  fastcov-examples.tar.gz", 
+            "title": "Latest version"
+        }, 
+        {
+            "location": "/download/#installation", 
+            "text": "fastcov  is implemented in  Golang  programming language,\n executable binary files for most popular operating system are freely available.  Just download compressed executable file of your operating system,\nand uncompress it with  tar -zxvf *.tar.gz  command or other tools.\nAnd then:    For Linux-like systems    If you have root privilege, simply copy it to  /usr/local/bin :  sudo cp fastcov /usr/local/bin/    Or add the directory of the executable file to environment variable PATH :  echo export PATH=\\$PATH:/PATH/OF/fastcov   ~/.bashrc      For windows , just copy  fastcov.exe  to  C:\\WINDOWS\\system32 .", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/download/#release-notes", 
+            "text": "V1.03  Add column  Avg.Degree  to  .patterns.txt  file  Remove option  -d  Update documents    V1.02  Add file name suffix  .txt  to all result files  Add degree information to  .patterns.txt  file  Update documents    V1.01  Fix a bug: sequence number of every cluster was repeatly counted in sequencing output.  Add support for non-standard amino acid J.  Shorten the option flags.  Packaging example sequences and documents in release archive files.    V1.0  First version", 
+            "title": "Release notes"
+        }, 
+        {
+            "location": "/manual/", 
+            "text": "Fastcov - Fast Multiple Covariance Detector v1.03\n\n\nUsage\n\n\nName:\n  fastcov V1.03 -- Fast Multiple Covariance Detector\n  http://yanlilab.github.io/fastcov\n\nAuthors:\n  Yan Li   \nliyan.com@gmail.com\n\n  Wei Shen \nshenwei356@gmail.com\n\n\nUsage:\n  fastcov [options] inputfile\n\nAvailable Options:\n  -p FLOAT                  minimum pairing purity of two sites [0.7]\n  -r FLOAT                  minimum matching ratio of to the pattern [0.45]\n  -n INT                    minimum residue number at each site [5]\n  -c FLOAT                  minimum proportion of any sequence identical to the\n                            consensus [0.33]\n  -o STRING                 prefix of output files [inputfile]\n  -j INT                    CPU number [CPU number of your computer]\n  -h, --help                show this help message\n\nCopyright:\n  Copyright \u00a9 2015-2016, All Rights Reserved\n  This software is free to distribute for academic research.\n\n\n\n\nPositional arguments\n\n\n\n\n\n\ninputfile\n should be aligned protein sequences in FASTA format file,\n produced by multi sequence alignment softwares.\n Case is not sensitive.\n\n\nOne-seq-per-line format could be converted to FASTA format by\n\n\nfor f in *.aln; do cat -n $f | awk '{print \"\n\"$1\"\\n\"$2}' \n $f.fas; done\n\n\n\n\n\n\n\nOptions\n\n\nMain algorithm parameters\n\n\n\n\n-p\n defines the minimum pairing purity of two sites. Default is 0.7.\n\n\n-r\n defines the minimum matching ratio of to the pattern at\nclustering stage. Default is 0.45.\n\n\n\n\nSequences filter criteria\n\n\n\n\n-n\n is the minimum residue number at each site.  Default value is 5.\n\n\n-c\n is the minimum proportion of any sequence identical to the consensus.\nDefault value is 0.33, i.e. the number of residues identical to the that of the\n same position of consensus sequences should be at  least one third of the length of consensus.\n Sequences that fail to reach this criteria will be discarded.\n\n\n\n\nOutput\n\n\n\n\n-o\n defines the prefix of output files, default value is the same as input\n file. e.g, for a input file \ntest.fa\n, output files will be:\ntest.aligned.fa.pairs.txt\ntest.aligned.fa.clusters.txt\ntest.aligned.fa.patterns.txt\ntest.aligned.fa.seq2patterns.txt\n\n\n\n\n\n\n\nPerformance\n\n\n\n\n-j\n is the number of CPU. \nfastcov\n detects your computer and set the\ndefault value with the maximum CPU number. The bigger the value is,\nthe faster \nfastcov\n runs.\n\n\n\n\nExamples\n\n\nTaking \nexamples/ABCD_RT_M.aligned.fas\n for example.\n\n\nQuik run:\n\n\nfastcov ABCD_RT_M.aligned.fas\n\n\n\nTerminal output:\n\n\nInput: ABCD_RT_M.aligned.fas\n\nStep 1/5: Reading sequences\n\n\nDone\n\nStep 2/5: Searching candidate sites\n\nDone\n\nStep 3/5: Searching independent pairs\n21115 / 21115 [===================================================================================] 100.00 % 28s\n\nCovariant site pairs saved to file: ABCD_RT_M.aligned.fas.pairs\n\nDone\n\nStep 4/5: Searching covariant patterns\n52 / 52 [===========================================================================================] 100.00 % 0\n\nCovariant patterns saved to file: ABCD_RT_M.aligned.fas.patterns\n\nDone\n\nStep 5/5: Clustering by covariant patterns\nCovariant patterns assigned to sequences: ABCD_RT_M.aligned.fas.seq2patterns\nSequences clustered by covariant patterns: ABCD_RT_M.aligned.fas.clusters\n\n\n\n\n\nThe most time-consuming stage is \nstep 3\n, so we add a process bar.\n\n\nOutput files:\n\n\nABCD_RT_M.aligned.fas.pairs.txt            # covariant pairs information, table file, could be imported to MS Excel\nABCD_RT_M.aligned.fas.patterns.txt         # covariant patterns, table file, could be imported to MS Excel\nABCD_RT_M.aligned.fas.clusters.txt         # sequence clusters by covariant patterns\nABCD_RT_M.aligned.fas.seq2patterns.txt     # covariant patterns of every sequence, table file, could be imported to MS Excel\n\n\n\nNote\n: For windows user, please use a modern text editor to view the result files.\nNotepad is not recommended, \nNotepad++\n is a better choice.\n\n\nMore examples: \nfastcov-examples.tar.gz\n\n\nErrors and Solutions\n\n\n\n\n\n\nNo input file given. Please feed \nfastcov\n a aligned amino acids sequences in FASTA format.\n\n\n$ fastcov\n[Error] no input file (aligned amino acids sequences in FASTA format) given.\ntype \"fastcov -h\" for help\n\n\n\n\n\n\n\nInput file is not aligned.\n\n\n[Error] sequence length not equal: 343 (AB014392_Pol-C) != 344.\ninput file should be aligned amino acids sequences in FASTA format\n\n\n\n\n\n\n\nIllegal characters in sequence. FASTA parsing module of \nfastcov\n strictly\n check the sequences, you may check input sequence according according to\n the IUPAC nucleotide code (http://www.bioinformatics.org/sms2/iupac.html).\n It may also be caused by unmatch of sequence type (PROTEIN) and actual\n sequence type (DNA) in FASTA file.\n\n\nInput: test.fa\n\nStep 1/5: Reading sequences\nerror when reading AB014367_Pol-C: invalid Protein sequence: AB014367_Pol-C\n\n\n\n\n\n\n\nFAQ\n\n\nPlease don't hesitate to email us.\n\n\nQ: What a mess when opening the result files!\n\n\nA: Microsoft Windows user may open the result files by Notepad provided by the Operating system.\nPlease choose another moder text editor like \nNotepad++\n.\n\n\nAuthors\n\n\nYan Li \n, Wei Shen \n\n\nCitation\n\n\nWei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)\n\n\nCopyright\n\n\nCopyright \u00a9 2015-2016, All Rights Reserved.\n\n\nThis software is free to distribute for academic research.", 
+            "title": "Manual"
+        }, 
+        {
+            "location": "/manual/#fastcov-fast-multiple-covariance-detector-v103", 
+            "text": "", 
+            "title": "Fastcov - Fast Multiple Covariance Detector v1.03"
+        }, 
+        {
+            "location": "/manual/#usage", 
+            "text": "Name:\n  fastcov V1.03 -- Fast Multiple Covariance Detector\n  http://yanlilab.github.io/fastcov\n\nAuthors:\n  Yan Li    liyan.com@gmail.com \n  Wei Shen  shenwei356@gmail.com \n\nUsage:\n  fastcov [options] inputfile\n\nAvailable Options:\n  -p FLOAT                  minimum pairing purity of two sites [0.7]\n  -r FLOAT                  minimum matching ratio of to the pattern [0.45]\n  -n INT                    minimum residue number at each site [5]\n  -c FLOAT                  minimum proportion of any sequence identical to the\n                            consensus [0.33]\n  -o STRING                 prefix of output files [inputfile]\n  -j INT                    CPU number [CPU number of your computer]\n  -h, --help                show this help message\n\nCopyright:\n  Copyright \u00a9 2015-2016, All Rights Reserved\n  This software is free to distribute for academic research.", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/manual/#positional-arguments", 
+            "text": "inputfile  should be aligned protein sequences in FASTA format file,\n produced by multi sequence alignment softwares.\n Case is not sensitive.  One-seq-per-line format could be converted to FASTA format by  for f in *.aln; do cat -n $f | awk '{print \" \"$1\"\\n\"$2}'   $f.fas; done", 
+            "title": "Positional arguments"
+        }, 
+        {
+            "location": "/manual/#options", 
+            "text": "Main algorithm parameters   -p  defines the minimum pairing purity of two sites. Default is 0.7.  -r  defines the minimum matching ratio of to the pattern at\nclustering stage. Default is 0.45.   Sequences filter criteria   -n  is the minimum residue number at each site.  Default value is 5.  -c  is the minimum proportion of any sequence identical to the consensus.\nDefault value is 0.33, i.e. the number of residues identical to the that of the\n same position of consensus sequences should be at  least one third of the length of consensus.\n Sequences that fail to reach this criteria will be discarded.   Output   -o  defines the prefix of output files, default value is the same as input\n file. e.g, for a input file  test.fa , output files will be: test.aligned.fa.pairs.txt\ntest.aligned.fa.clusters.txt\ntest.aligned.fa.patterns.txt\ntest.aligned.fa.seq2patterns.txt    Performance   -j  is the number of CPU.  fastcov  detects your computer and set the\ndefault value with the maximum CPU number. The bigger the value is,\nthe faster  fastcov  runs.", 
+            "title": "Options"
+        }, 
+        {
+            "location": "/manual/#examples", 
+            "text": "Taking  examples/ABCD_RT_M.aligned.fas  for example.  Quik run:  fastcov ABCD_RT_M.aligned.fas  Terminal output:  Input: ABCD_RT_M.aligned.fas\n\nStep 1/5: Reading sequences\n\n\nDone\n\nStep 2/5: Searching candidate sites\n\nDone\n\nStep 3/5: Searching independent pairs\n21115 / 21115 [===================================================================================] 100.00 % 28s\n\nCovariant site pairs saved to file: ABCD_RT_M.aligned.fas.pairs\n\nDone\n\nStep 4/5: Searching covariant patterns\n52 / 52 [===========================================================================================] 100.00 % 0\n\nCovariant patterns saved to file: ABCD_RT_M.aligned.fas.patterns\n\nDone\n\nStep 5/5: Clustering by covariant patterns\nCovariant patterns assigned to sequences: ABCD_RT_M.aligned.fas.seq2patterns\nSequences clustered by covariant patterns: ABCD_RT_M.aligned.fas.clusters  The most time-consuming stage is  step 3 , so we add a process bar.  Output files:  ABCD_RT_M.aligned.fas.pairs.txt            # covariant pairs information, table file, could be imported to MS Excel\nABCD_RT_M.aligned.fas.patterns.txt         # covariant patterns, table file, could be imported to MS Excel\nABCD_RT_M.aligned.fas.clusters.txt         # sequence clusters by covariant patterns\nABCD_RT_M.aligned.fas.seq2patterns.txt     # covariant patterns of every sequence, table file, could be imported to MS Excel  Note : For windows user, please use a modern text editor to view the result files.\nNotepad is not recommended,  Notepad++  is a better choice.  More examples:  fastcov-examples.tar.gz", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/manual/#errors-and-solutions", 
+            "text": "No input file given. Please feed  fastcov  a aligned amino acids sequences in FASTA format.  $ fastcov\n[Error] no input file (aligned amino acids sequences in FASTA format) given.\ntype \"fastcov -h\" for help    Input file is not aligned.  [Error] sequence length not equal: 343 (AB014392_Pol-C) != 344.\ninput file should be aligned amino acids sequences in FASTA format    Illegal characters in sequence. FASTA parsing module of  fastcov  strictly\n check the sequences, you may check input sequence according according to\n the IUPAC nucleotide code (http://www.bioinformatics.org/sms2/iupac.html).\n It may also be caused by unmatch of sequence type (PROTEIN) and actual\n sequence type (DNA) in FASTA file.  Input: test.fa\n\nStep 1/5: Reading sequences\nerror when reading AB014367_Pol-C: invalid Protein sequence: AB014367_Pol-C", 
+            "title": "Errors and Solutions"
+        }, 
+        {
+            "location": "/manual/#faq", 
+            "text": "Please don't hesitate to email us.  Q: What a mess when opening the result files!  A: Microsoft Windows user may open the result files by Notepad provided by the Operating system.\nPlease choose another moder text editor like  Notepad++ .", 
+            "title": "FAQ"
+        }, 
+        {
+            "location": "/manual/#authors", 
+            "text": "Yan Li  , Wei Shen", 
+            "title": "Authors"
+        }, 
+        {
+            "location": "/manual/#citation", 
+            "text": "Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)", 
+            "title": "Citation"
+        }, 
+        {
+            "location": "/manual/#copyright", 
+            "text": "Copyright \u00a9 2015-2016, All Rights Reserved.  This software is free to distribute for academic research.", 
+            "title": "Copyright"
+        }
+    ]
+}

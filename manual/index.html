@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="yanli">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Manual - Fastcov - Fast Multiple Covariance Detector</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-28948626-4', 'http://yanlilab.github.io/fastcov');
+            ga('send', 'pageview');
+        </script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">Fastcov - Fast Multiple Covariance Detector</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../download/">Download</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Manual</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../download/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://yanlilab.github.io">
+                            
+                            Yanlilab
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#fastcov-fast-multiple-covariance-detector-v103">Fastcov - Fast Multiple Covariance Detector v1.03</a></li>
+        
+            <li><a href="#usage">Usage</a></li>
+        
+            <li><a href="#examples">Examples</a></li>
+        
+            <li><a href="#errors-and-solutions">Errors and Solutions</a></li>
+        
+            <li><a href="#faq">FAQ</a></li>
+        
+            <li><a href="#authors">Authors</a></li>
+        
+            <li><a href="#citation">Citation</a></li>
+        
+            <li><a href="#copyright">Copyright</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="fastcov-fast-multiple-covariance-detector-v103">Fastcov - Fast Multiple Covariance Detector v1.03</h1>
+<h2 id="usage">Usage</h2>
+<pre><code>Name:
+  fastcov V1.03 -- Fast Multiple Covariance Detector
+  http://yanlilab.github.io/fastcov
+
+Authors:
+  Yan Li   &lt;liyan.com@gmail.com&gt;
+  Wei Shen &lt;shenwei356@gmail.com&gt;
+
+Usage:
+  fastcov [options] inputfile
+
+Available Options:
+  -p FLOAT                  minimum pairing purity of two sites [0.7]
+  -r FLOAT                  minimum matching ratio of to the pattern [0.45]
+  -n INT                    minimum residue number at each site [5]
+  -c FLOAT                  minimum proportion of any sequence identical to the
+                            consensus [0.33]
+  -o STRING                 prefix of output files [inputfile]
+  -j INT                    CPU number [CPU number of your computer]
+  -h, --help                show this help message
+
+Copyright:
+  Copyright © 2015-2016, All Rights Reserved
+  This software is free to distribute for academic research.
+</code></pre>
+
+<h4 id="positional-arguments">Positional arguments</h4>
+<ul>
+<li>
+<p><code>inputfile</code> should be aligned protein sequences in FASTA format file,
+ produced by multi sequence alignment softwares.
+ Case is not sensitive.</p>
+<p>One-seq-per-line format could be converted to FASTA format by</p>
+<pre><code>for f in *.aln; do cat -n $f | awk '{print "&gt;"$1"\n"$2}' &gt; $f.fas; done
+</code></pre>
+</li>
+</ul>
+<h4 id="options">Options</h4>
+<p>Main algorithm parameters</p>
+<ul>
+<li><code>-p</code> defines the minimum pairing purity of two sites. Default is 0.7.</li>
+<li><code>-r</code> defines the minimum matching ratio of to the pattern at
+clustering stage. Default is 0.45.</li>
+</ul>
+<p>Sequences filter criteria</p>
+<ul>
+<li><code>-n</code> is the minimum residue number at each site.  Default value is 5.</li>
+<li><code>-c</code> is the minimum proportion of any sequence identical to the consensus.
+Default value is 0.33, i.e. the number of residues identical to the that of the
+ same position of consensus sequences should be at  least one third of the length of consensus.
+ Sequences that fail to reach this criteria will be discarded.</li>
+</ul>
+<p>Output</p>
+<ul>
+<li><code>-o</code> defines the prefix of output files, default value is the same as input
+ file. e.g, for a input file <code>test.fa</code>, output files will be:<pre><code>test.aligned.fa.pairs.txt
+test.aligned.fa.clusters.txt
+test.aligned.fa.patterns.txt
+test.aligned.fa.seq2patterns.txt
+</code></pre>
+</li>
+</ul>
+<p>Performance</p>
+<ul>
+<li><code>-j</code> is the number of CPU. <code>fastcov</code> detects your computer and set the
+default value with the maximum CPU number. The bigger the value is,
+the faster <code>fastcov</code> runs.</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<p>Taking <code>examples/ABCD_RT_M.aligned.fas</code> for example.</p>
+<p>Quik run:</p>
+<pre><code>fastcov ABCD_RT_M.aligned.fas
+</code></pre>
+<p>Terminal output:</p>
+<pre><code>Input: ABCD_RT_M.aligned.fas
+
+Step 1/5: Reading sequences
+
+
+Done
+
+Step 2/5: Searching candidate sites
+
+Done
+
+Step 3/5: Searching independent pairs
+21115 / 21115 [===================================================================================] 100.00 % 28s
+
+Covariant site pairs saved to file: ABCD_RT_M.aligned.fas.pairs
+
+Done
+
+Step 4/5: Searching covariant patterns
+52 / 52 [===========================================================================================] 100.00 % 0
+
+Covariant patterns saved to file: ABCD_RT_M.aligned.fas.patterns
+
+Done
+
+Step 5/5: Clustering by covariant patterns
+Covariant patterns assigned to sequences: ABCD_RT_M.aligned.fas.seq2patterns
+Sequences clustered by covariant patterns: ABCD_RT_M.aligned.fas.clusters
+
+</code></pre>
+
+<p>The most time-consuming stage is <code>step 3</code>, so we add a process bar.</p>
+<p>Output files:</p>
+<pre><code>ABCD_RT_M.aligned.fas.pairs.txt            # covariant pairs information, table file, could be imported to MS Excel
+ABCD_RT_M.aligned.fas.patterns.txt         # covariant patterns, table file, could be imported to MS Excel
+ABCD_RT_M.aligned.fas.clusters.txt         # sequence clusters by covariant patterns
+ABCD_RT_M.aligned.fas.seq2patterns.txt     # covariant patterns of every sequence, table file, could be imported to MS Excel
+</code></pre>
+<p><strong>Note</strong>: For windows user, please use a modern text editor to view the result files.
+Notepad is not recommended, <a href="https://notepad-plus-plus.org/">Notepad++</a> is a better choice.</p>
+<p>More examples: <a href="../download/fastcov-examples.tar.gz">fastcov-examples.tar.gz</a></p>
+<h2 id="errors-and-solutions">Errors and Solutions</h2>
+<ol>
+<li>
+<p>No input file given. Please feed <code>fastcov</code> a aligned amino acids sequences in FASTA format.</p>
+<pre><code>$ fastcov
+[Error] no input file (aligned amino acids sequences in FASTA format) given.
+type "fastcov -h" for help
+</code></pre>
+</li>
+<li>
+<p>Input file is not aligned.</p>
+<pre><code>[Error] sequence length not equal: 343 (AB014392_Pol-C) != 344.
+input file should be aligned amino acids sequences in FASTA format
+</code></pre>
+</li>
+<li>
+<p>Illegal characters in sequence. FASTA parsing module of <code>fastcov</code> strictly
+ check the sequences, you may check input sequence according according to
+ the IUPAC nucleotide code (http://www.bioinformatics.org/sms2/iupac.html).
+ It may also be caused by unmatch of sequence type (PROTEIN) and actual
+ sequence type (DNA) in FASTA file.</p>
+<pre><code>Input: test.fa
+
+Step 1/5: Reading sequences
+error when reading AB014367_Pol-C: invalid Protein sequence: AB014367_Pol-C
+</code></pre>
+</li>
+</ol>
+<h2 id="faq">FAQ</h2>
+<p>Please don't hesitate to email us.</p>
+<p>Q: What a mess when opening the result files!</p>
+<p>A: Microsoft Windows user may open the result files by Notepad provided by the Operating system.
+Please choose another moder text editor like <a href="https://notepad-plus-plus.org/">Notepad++</a>.</p>
+<h2 id="authors">Authors</h2>
+<p>Yan Li <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#121;&#97;&#110;&#46;&#99;&#111;&#109;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#108;&#105;&#121;&#97;&#110;&#46;&#99;&#111;&#109;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>, Wei Shen <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#104;&#101;&#110;&#119;&#101;&#105;&#51;&#53;&#54;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#104;&#101;&#110;&#119;&#101;&#105;&#51;&#53;&#54;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+<h2 id="citation">Citation</h2>
+<p>Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)</p>
+<h2 id="copyright">Copyright</h2>
+<p>Copyright © 2015-2016, All Rights Reserved.</p>
+<p>This software is free to distribute for academic research.</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
