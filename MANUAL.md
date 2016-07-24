@@ -81,7 +81,7 @@ Quik run:
 
     fastcov ABCD_RT_M.aligned.fas
 
-Terminal Output:
+Terminal output:
 
 ```
 Input: ABCD_RT_M.aligned.fas
@@ -126,7 +126,7 @@ Output files:
 **Note**: For windows user, please use a modern text editor to view the result files.
 Notepad is not recommended, [Notepad++](https://notepad-plus-plus.org/) is a better choice.
 
-[More examples](https://github.com/yanlilab/fastcov/tree/master/examples)
+More examples: [fastcov-examples.tar.gz](/download/fastcov-examples.tar.gz)
 
 ## Errors and Solutions
 
@@ -166,6 +166,10 @@ Please choose another moder text editor like [Notepad++](https://notepad-plus-pl
 
 ## Authors
 Yan Li <liyan.com@gmail.com>, Wei Shen <shenwei356@gmail.com>
+
+## Citation
+
+Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)
 
 ## Copyright
 Copyright © 2015-2016, All Rights Reserved.

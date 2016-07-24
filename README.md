@@ -28,11 +28,12 @@ Visit [download page](http://yanlilab.github.io/fastcov/download/).
 
 Read [manual](http://yanlilab.github.io/fastcov/manual).
 
-## Please cite
+## Citation
 
-Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (submitted)
+Wei Shen, Yan Li\*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)
 
 ## Copyright
+
 Copyright © 2015-2016, All Rights Reserved.
 
 This software is free to distribute for academic research.
