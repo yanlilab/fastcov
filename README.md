@@ -1,5 +1,4 @@
-# Fastcov
-Fast Multiple Covariance Detector. [http://yanlilab.github.io/fastcov](http://yanlilab.github.io/fastcov)
+## Fastcov - A novel algorithm for detecting multiple covariance and clustering of biological sequences
 
 ## Introduction
 
@@ -30,7 +29,9 @@ Read [manual](http://yanlilab.github.io/fastcov/manual).
 
 ## Citation
 
-Wei Shen, Yan Li\*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)
+Wei Shen, Yan Li\*. 
+A novel algorithm for detecting multiple covariance and clustering of biological sequences.
+*Sci. Rep*. 6, 30425; [doi:10.1038/srep30425](https://doi.org/10.1038/srep30425) (2016).
 
 ## Copyright
 

@@ -169,7 +169,9 @@ Yan Li <liyan.com@gmail.com>, Wei Shen <shenwei356@gmail.com>
 
 ## Citation
 
-Wei Shen, Yan Li*. A novel algorithm for detecting multiple covariance and clustering of biological sequences (accepted)
+Wei Shen, Yan Li\*. 
+A novel algorithm for detecting multiple covariance and clustering of biological sequences.
+*Sci. Rep*. 6, 30425; [doi:10.1038/srep30425](https://doi.org/10.1038/srep30425) (2016).
 
 ## Copyright
 Copyright © 2015-2016, All Rights Reserved.
