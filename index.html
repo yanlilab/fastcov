@@ -12,9 +12,9 @@
 	<title>Fastcov - Fast Multiple Covariance Detector</title>
 
         <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/highlight.css">
+        <link href="./css/base.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -35,14 +35,13 @@
         
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
         <!-- Collapsed navigation -->
         <div class="navbar-header">
-            
             <!-- Expander button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -50,7 +49,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            
 
             <!-- Main title -->
             <a class="navbar-brand" href=".">Fastcov - Fast Multiple Covariance Detector</a>
@@ -58,56 +56,53 @@
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
             
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li class="active">
-                        <a href=".">Home</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="download/">Download</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="manual/">Manual</a>
-                    </li>
-                
-                
-                </ul>
             
+                <li class="active">
+                    <a href=".">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="download/">Download</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="manual/">Manual</a>
+                </li>
+            
+            
+            </ul>
 
+            <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
+                <li class="disabled">
+                    <a rel="next" >
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="download/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="download/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-                
-                
-                    <li>
-                        <a href="https://yanlilab.github.io">
-                            
-                            Yanlilab
-                        </a>
-                    </li>
+                <li>
+                    <a href="https://yanlilab.github.io">
+                        
+                        Yanlilab
+                    </a>
+                </li>
                 
             </ul>
         </div>
@@ -115,8 +110,7 @@
 </div>
 
         <div class="container">
-            
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
         <li class="main active"><a href="#fastcov-a-novel-algorithm-for-detecting-multiple-covariance-and-clustering-of-biological-sequences">Fastcov - A novel algorithm for detecting multiple covariance and clustering of biological sequences</a></li>
@@ -139,7 +133,7 @@
     
     </ul>
 </div></div>
-                <div class="col-md-9" role="main">
+            <div class="col-md-9" role="main">
 
 <h2 id="fastcov-a-novel-algorithm-for-detecting-multiple-covariance-and-clustering-of-biological-sequences">Fastcov - A novel algorithm for detecting multiple covariance and clustering of biological sequences</h2>
 <h2 id="introduction">Introduction</h2>
@@ -170,13 +164,12 @@ A novel algorithm for detecting multiple covariance and clustering of biological
 <h2 id="copyright">Copyright</h2>
 <p>Copyright © 2015-2016, All Rights Reserved.</p>
 <p>This software is free to distribute for academic research.</p></div>
-            
         </div>
 
         <footer class="col-md-12">
             <hr>
             
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
         <script src="./js/jquery-1.10.2.min.js"></script>
@@ -210,11 +203,5 @@ A novel algorithm for detecting multiple covariance and clustering of biological
                 </div>
             </div>
         </div>
-
     </body>
 </html>
-
-<!--
-MkDocs version : 0.15.3
-Build Date UTC : 2016-07-25 10:06:16.332246
--->
