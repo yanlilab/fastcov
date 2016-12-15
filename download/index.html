@@ -4,24 +4,24 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <meta name="description" content="Fastcov - Fast Multiple Covariance Detector">
         <meta name="author" content="yanli">
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-
-	<title>Download - Fastcov - Fast Multiple Covariance Detector</title>
-
+        <title>Download - Fastcov - Fast Multiple Covariance Detector</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/highlight.css">
         <link href="../css/base.css" rel="stylesheet">
-
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
         
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,7 +32,7 @@
             ga('create', 'UA-28948626-4', 'http://yanlilab.github.io/fastcov');
             ga('send', 'pageview');
         </script>
-        
+         
     </head>
 
     <body>
@@ -49,8 +49,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <!-- Main title -->
             <a class="navbar-brand" href="..">Fastcov - Fast Multiple Covariance Detector</a>
         </div>
 
@@ -86,16 +84,16 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li >
-                    <a rel="next" href="..">
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </li>
-                <li >
-                    <a rel="prev" href="../manual/">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../manual/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
                 
                 <li>
                     <a href="https://yanlilab.github.io">
@@ -110,8 +108,9 @@
 </div>
 
         <div class="container">
-            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+    
     
         <li class="main active"><a href="#latest-version">Latest version</a></li>
         
@@ -122,9 +121,10 @@
         <li class="main "><a href="#release-notes">Release notes</a></li>
         
     
+    
     </ul>
 </div></div>
-            <div class="col-md-9" role="main">
+                <div class="col-md-9" role="main">
 
 <h2 id="latest-version">Latest version</h2>
 <p>Fastcov V1.03</p>
@@ -175,14 +175,14 @@ And then:</p>
 <p><strong>For Linux-like systems</strong></p>
 <ol>
 <li>
-<p>If you have root privilege, simply copy it to <code>/usr/local/bin</code>:</p>
+<p>If you have root privilege simply copy it to <code>/usr/local/bin</code>:</p>
 <pre><code>sudo cp fastcov /usr/local/bin/
 </code></pre>
 </li>
 <li>
-<p>Or add the directory of the executable file to environment variable
-<code>PATH</code>:</p>
-<pre><code>echo export PATH=\$PATH:/PATH/OF/fastcov &gt;&gt; ~/.bashrc
+<p>Or add the current directory of the executable file to environment variable <code>PATH</code>:</p>
+<pre><code>echo export PATH=\"$(pwd)\":\$PATH &gt;&gt; ~/.bashrc
+source ~/.bashrc
 </code></pre>
 </li>
 </ol>
@@ -224,10 +224,6 @@ And then:</p>
             
             <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
-
-        <script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script>
         <script>var base_url = '..';</script>
         <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
         <script src="../js/base.js"></script>
