@@ -19,7 +19,7 @@ pairs but also more powerful functions, including multiple covariance detection 
 classification, that are most useful for studying the point and compensatory mutations caused by
 natural selection, drug induction, environmental pressure, etc.
 
-**Typical applications**
+### Typical applications
 
 1. Fastcov is able to figure out the characteristic patterns at covariant sites between experimental and control sequences. Moreover, based on the patterns, it can extract the characteristic sequences from unknown data.
 
